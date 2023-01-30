@@ -10,6 +10,7 @@ const Object = lazy(()=>import('./object'))
 const Tuples = lazy(()=>import('./tuples'))
 const Function = lazy(()=>import('./function'))
 const Enum = lazy(()=>import('./enum'))
+// const Class = lazy(()=>import('./class'))
 
 function App() {
 
@@ -33,6 +34,9 @@ function App() {
             <li>
               <Link to="/enum">Enum</Link>
             </li>
+            {/* <li>
+              <Link to="/class">Class</Link>
+            </li> */}
           </ul>
         </nav>
 
@@ -42,6 +46,7 @@ function App() {
             <Route path="/tuples" element={<Tuples />} />
             <Route path="/function" element={<Function />} />
             <Route path="/enum" element={<Enum />} />
+            {/* <Route path="/class" element={<Class />} /> */}
           </Routes>
         </Suspense>
         

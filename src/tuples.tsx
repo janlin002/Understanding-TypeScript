@@ -15,6 +15,7 @@ const Tuples = () => {
   person.favNumber.push('12')
 
   console.log(person, 'person')
+
   return (
     <div>Tuples</div>
   )
