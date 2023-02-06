@@ -1,34 +1,29 @@
-class myClass {
-    // name: string
-    employees: string[] = []
+class Car4 {
+    // constructor() {
+    //     console.log('Creating a new car');
+    // }
+    abc: number = 1
+}
 
-    constructor(public name:string){
-        // this.name = n
-    }
-
-    describe(){
-        // console.log('Department'+ name) 
-        // 這邊的 name 是 window 裡面的 name ，如果要使用 myClass 裡面的 name，必須要加上 this
-
-        console.log('Department' + '' + this.name) 
-    }
-
-    addEmplyee(emloyee: string) {
-        this.employees.push(emloyee)
-    }
-
-    printEmployeeInformation(){
-        console.log(this.employees)
+class Porsche extends Car4 {
+    constructor() {
+        super();
+        console.log('Creating Porsche');
     }
 }
 
-const test = new myClass('123')
+let c = new Porsche();
 
-test.addEmplyee('david')
-test.addEmplyee('bill')
-
-test.employees[2] = 'amy'
-
-test.printEmployeeInformation()
-
-test.describe()
+// class Login {
+//     protected password: string = '123456';
+    
+//   }
+  
+//   // CarII 繼承了 Car
+//   class User extends Login {
+//     userLogin() :void{
+//       console.log(this.password)
+//     }
+//   }
+  
+//   User.userLogin()

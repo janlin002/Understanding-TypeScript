@@ -1,24 +1,29 @@
-var myClass = /** @class */ (function () {
-    function myClass(n) {
-        this.employees = [];
-        this.name = n;
+var GET_SET = /** @class */ (function () {
+    function GET_SET() {
+        this.mySecret = "secret passcode";
     }
-    myClass.prototype.describe = function () {
-        // console.log('Department'+ name) 
-        // 這邊的 name 是 window 裡面的 name ，如果要使用 myClass 裡面的 name，必須要加上 this
-        console.log('Department' + '' + this.name);
-    };
-    myClass.prototype.addEmplyee = function (emloyee) {
-        this.employees.push(emloyee);
-    };
-    myClass.prototype.printEmployeeInformation = function () {
-        console.log(this.employees);
-    };
-    return myClass;
+    Object.defineProperty(GET_SET.prototype, "getMySecret", {
+        // 定義getter存取子 讀取 屬性值
+        get: function () {
+            return this.mySecret;
+        },
+        // 定義setter存取子 修改 屬性值
+        set: function (name) {
+            if (name && name === this.mySecret) {
+                console.log('IN');
+            }
+            else {
+                console.error('error');
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return GET_SET;
 }());
-var test = new myClass('123');
-test.addEmplyee('david');
-test.addEmplyee('bill');
-test.employees[2] = 'amy';
-test.printEmployeeInformation();
-test.describe();
+var JanBoyOp = new GET_SET();
+// JanBoyOp.getMySecret = 'hi'
+// if (JanBoyOp.getMySecret) {
+//     alert(JanBoyOp.getMySecret); //Una Lin
+// }
+// Accessors are only available when targeting ECMAScript 5 and higher.

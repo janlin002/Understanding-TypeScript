@@ -11,6 +11,8 @@ const Tuples = lazy(()=>import('./tuples'))
 const Function = lazy(()=>import('./function'))
 const Enum = lazy(()=>import('./enum'))
 // const Class = lazy(()=>import('./class'))
+const Interface = lazy(()=>import('./interface'))
+const Generics = lazy(()=>import('./Generics'))
 
 function App() {
 
@@ -37,6 +39,12 @@ function App() {
             {/* <li>
               <Link to="/class">Class</Link>
             </li> */}
+            <li>
+              <Link to="/interface">Interface</Link>
+            </li>
+            <li>
+              <Link to="/generics">Generics</Link>
+            </li>
           </ul>
         </nav>
 
@@ -47,6 +55,8 @@ function App() {
             <Route path="/function" element={<Function />} />
             <Route path="/enum" element={<Enum />} />
             {/* <Route path="/class" element={<Class />} /> */}
+            <Route path="/interface" element={<Interface />} />
+            <Route path="/generics" element={<Generics />} />
           </Routes>
         </Suspense>
         
