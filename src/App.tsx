@@ -12,7 +12,7 @@ const Function = lazy(()=>import('./function'))
 const Enum = lazy(()=>import('./enum'))
 // const Class = lazy(()=>import('./class'))
 const Interface = lazy(()=>import('./interface'))
-const Generics = lazy(()=>import('./Generics'))
+// const Generics = lazy(()=>import('./Generics'))
 
 function App() {
 

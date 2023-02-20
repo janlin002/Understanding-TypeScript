@@ -68,6 +68,29 @@ const Generics = () => {
     const isAdmin = getObjValue(user, 'isAdmin'); // true
     const manufacturer = getObjValue(product, 'manufacturer'); // 'Apple'
 
+    interface mergeLength {
+      length: number
+    }
+  
+  function mergeObj<T extends mergeLength>(element: T){
+    if(element.length === 0){
+      return true
+    }else if(element.length > 0){
+      return false
+    }
+    return null
+  }
+
+  mergeObj(['123', '234'])
+
+  function keyOfTest<T, U extends keyof T>(element: T, item: U){
+    const target = element[item]
+
+    return target
+  }
+
+  keyOfTest({name: 'JAN'}, 'name')
+
 
 
   return (
