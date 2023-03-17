@@ -3,7 +3,7 @@ import axios from 'axios'
 const form = document.querySelector('form')
 const addressInput = document.getElementById('address') as HTMLInputElement
 
-const GOOGLE_API_KEY = 'AIzaSyDcvaJ1cd9HvaqF4UYMKe_xLTZ3zhXpF8o'
+const GOOGLE_API_KEY = ''
 
 // const GOOGLE_MAP_API = `https://maps.googleapis.com/maps/api/geocode/json?address=&key=${GOOGLE_API_KEY}`
 
