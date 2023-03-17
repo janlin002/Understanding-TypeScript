@@ -7,7 +7,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        // publicPath: '/dist/' // 讓webpack了解該去哪看更新
+        publicPath: '/dist/' // 讓webpack了解該去哪看更新
     },
     // devtool: 'false',
     devServer: {
@@ -27,7 +27,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts', 'js']
+        extensions: ['.ts', '.js']
     },
     plugins: [
         new CleanPlugin.CleanWebpackPlugin()
