@@ -13,6 +13,7 @@ const Enum = lazy(()=>import('./enum'))
 // const Class = lazy(()=>import('./class'))
 const Interface = lazy(()=>import('./interface'))
 // const Generics = lazy(()=>import('./Generics'))
+const TsReset = lazy(()=>import('./ts-reset'))
 
 function App() {
 
@@ -45,6 +46,9 @@ function App() {
             <li>
               <Link to="/generics">Generics</Link>
             </li>
+            <li>
+              <Link to="/ts-reset">TsReset</Link>
+            </li>
           </ul>
         </nav>
 
@@ -56,7 +60,8 @@ function App() {
             <Route path="/enum" element={<Enum />} />
             {/* <Route path="/class" element={<Class />} /> */}
             <Route path="/interface" element={<Interface />} />
-            <Route path="/generics" element={<Generics />} />
+            {/* <Route path="/generics" element={<Generics />} /> */}
+            <Route path="/ts-reset" element={<TsReset />} />
           </Routes>
         </Suspense>
         

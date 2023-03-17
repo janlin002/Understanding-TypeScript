@@ -21,7 +21,46 @@ const Function = () => {
         return true;
     })
 
+    type a = {
+      name: string,
+      age: number
+    }
 
+    type b = {
+      height: number,
+      weight: number
+    }
+
+    function UnionTypes(people: a & b){
+      console.log(people)
+    }
+
+    UnionTypes({
+      name: 'jan',
+      age: 20,
+      height: 180,
+      weight: 100
+    })
+
+    /**
+     * | => 符合一個即可
+     * & => 兩個都要符合
+     */
+
+    type SingleNamePerson = {
+      name: string;
+    };
+
+    type FullNamePerson = {
+      name: string;
+      surname: string;
+    };
+
+    // function getPerson(name: string): SingleNamePerson
+    // function getPerson(name: string, surname: string): FullNamePerson
+    // Error: Function implementation is missing or not immediately following the declaration.ts(2391)
+    // 如果要解決上面的問題，需要把 function overload 改成 type alias
+    // https://bobbyhadz.com/blog/typescript-function-implementation-is-missing
     
   return (
     <div>Function</div>
